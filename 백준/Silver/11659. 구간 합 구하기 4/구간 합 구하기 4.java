@@ -1,4 +1,3 @@
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -17,11 +16,14 @@ public class Main {
             windowSum[i + 1] = windowSum[i] + Integer.parseInt(st.nextToken());
         }
 
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < howManyQuery; i++) {
             st = new StringTokenizer(br.readLine());
             int queryI = Integer.parseInt(st.nextToken());
             int queryJ = Integer.parseInt(st.nextToken());
-            System.out.println(windowSum[queryJ] - windowSum[queryI - 1]);
+            sb.append(windowSum[queryJ] - windowSum[queryI - 1]).append("\n");
         }
+        System.out.print(sb);
+        br.close();
     }
 }
