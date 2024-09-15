@@ -11,7 +11,7 @@ public class Main {
         int[] classScore = Arrays.stream(inputString.split(" ")).mapToInt(Integer::parseInt).toArray();
         int sumClassScore = Arrays.stream(classScore).sum();
         int maxClassScore = Arrays.stream(classScore).max().getAsInt();
-        double result = (double) (sumClassScore * 100) / maxClassScore / howManyNum;
+        double result = (double) sumClassScore / maxClassScore / howManyNum * 100;
         System.out.println(result);
     }
 }
